@@ -12,7 +12,7 @@ class UserAgentServiceProvider extends ServiceProvider
     public function register()
     {
         $this->app->singleton('useragent', function ($app) {
-            return new UserAgent();
+            return UserAgent::create();
         });
     }
     /**
